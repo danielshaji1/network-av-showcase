@@ -59,13 +59,11 @@
     .photo-link img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; color: transparent }
     .photo-card:hover .photo-link img { transform: scale(1.035) }
     .photo-index { position: absolute; top: 12px; left: 12px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #18231ecf; color: white; font: .78rem var(--serif) }
-    .photo-caption { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 15px 16px 16px }
-    .photo-caption span:first-child { font-size: .84rem; font-weight: 630 }
-    .photo-kind { color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase }
-    .photo-fallback { display: none; position: absolute; inset: 0; place-content: center; padding: 24px; text-align: center; background: linear-gradient(145deg, #dfe4db, #ccd7c7); color: var(--forest); font-size: .84rem }
-    .photo-fallback strong { display: block; margin-bottom: 5px; font: 1.4rem var(--serif) }
-    .photo-link.is-unavailable img { display: none }
-    .photo-link.is-unavailable .photo-fallback { display: grid }
+    .photo-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 16px 16px }
+    .caption-title { display: block; font-size: .84rem; font-weight: 630 }
+    .caption-kind { display: block; margin-top: 3px; color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase }
+    .original-link { flex: none; color: #526c45; font-size: .72rem; font-weight: 650; text-decoration-thickness: 1px; text-underline-offset: 3px }
+    .photo-count { color: var(--muted); font-size: .8rem }
     .about { display: grid; grid-template-columns: .75fr 1.25fr; gap: 45px; padding: 42px 0 74px; border-top: 1px solid var(--rule) }
     .about-label { color: #758365; font-size: .7rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase }
     .about p { max-width: 690px; margin: 0; color: #47544c; font: 1.25rem/1.5 var(--serif) }
@@ -112,8 +110,8 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="images/av-rack-install.jpg" alt="Integrated audiovisual rack with wireless microphone and in-ear monitoring equipment" fetchpriority="high">
-        <div class="photo-note"><strong>In the field</strong>Network &amp; AV systems</div>
+        <img src="images/previews/IMG_1366.jpg" alt="Completed rack with wireless microphones, in-ear monitoring, audio distribution, and network connections" fetchpriority="high">
+        <div class="photo-note"><strong>Wireless &amp; monitoring</strong>Integrated AV rack</div>
       </div>
     </section>
 
@@ -121,15 +119,14 @@
       <div class="shell gallery-section">
         <div class="section-heading">
           <div><p class="section-kicker">Selected work · 2026</p><h2 id="installations-title">Installations</h2></div>
-          <p class="section-copy">A growing collection of completed work and active installs. Select a photo to open the original image.</p>
+          <div><p class="section-copy">A growing collection of completed work and active installs. Open a preview or download the full-resolution original.</p><div class="photo-count">6 field photos</div></div>
         </div>
         <div class="photo-grid">
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1365.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1365.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">01</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1366.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1366.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">02</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1756.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1756.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">03</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1757.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1757.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">04</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1760.heic" target="_blank" rel="noreferrer"><img src="images/IMG_1760.heic" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">05</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
-          <article class="photo-card"><a class="photo-link" href="images/IMG_1763.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1763.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">06</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/previews/IMG_1365.jpg" target="_blank" rel="noreferrer"><img src="images/previews/IMG_1365.jpg" alt="Audiovisual equipment rack during installation, with patch cables still being dressed" loading="lazy" decoding="async"><span class="photo-index">01</span></a><div class="photo-caption"><div><span class="caption-title">Rack build in progress</span><span class="caption-kind">AV systems</span></div><a class="original-link" href="images/IMG_1365.HEIC" download>Original ↗</a></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/previews/IMG_1756.jpg" target="_blank" rel="noreferrer"><img src="images/previews/IMG_1756.jpg" alt="Network switch, computer, and video processing equipment in an AV rack" loading="lazy" decoding="async"><span class="photo-index">02</span></a><div class="photo-caption"><div><span class="caption-title">Signal &amp; network hardware</span><span class="caption-kind">AV integration</span></div><a class="original-link" href="images/IMG_1756.HEIC" download>Original ↗</a></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/previews/IMG_1757.jpg" target="_blank" rel="noreferrer"><img src="images/previews/IMG_1757.jpg" alt="Managed network switches with color-coded Ethernet cabling" loading="lazy" decoding="async"><span class="photo-index">03</span></a><div class="photo-caption"><div><span class="caption-title">Switching &amp; cable runs</span><span class="caption-kind">Network infrastructure</span></div><a class="original-link" href="images/IMG_1757.HEIC" download>Original ↗</a></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/previews/IMG_1760.jpg" target="_blank" rel="noreferrer"><img src="images/previews/IMG_1760.jpg" alt="Wireless audio receiver and network switch integrated in an equipment rack" loading="lazy" decoding="async"><span class="photo-index">04</span></a><div class="photo-caption"><div><span class="caption-title">Wireless audio integration</span><span class="caption-kind">AV systems</span></div><a class="original-link" href="images/IMG_1760.heic" download>Original ↗</a></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/previews/IMG_1763.jpg" target="_blank" rel="noreferrer"><img src="images/previews/IMG_1763.jpg" alt="TP-Link 24-port Gigabit Ethernet switch installed on site" loading="lazy" decoding="async"><span class="photo-index">05</span></a><div class="photo-caption"><div><span class="caption-title">Access switching</span><span class="caption-kind">Network infrastructure</span></div><a class="original-link" href="images/IMG_1763.HEIC" download>Original ↗</a></div></article>
         </div>
       </div>
     </section>
@@ -140,10 +137,5 @@
     </section>
   </main>
   <footer><div class="shell footer-inner"><span>© 2026 Daniel Shaji · Network &amp; AV fieldwork</span><a href="#top">Back to top ↑</a></div></footer>
-  <script>
-    document.querySelectorAll('.photo-link img').forEach((image) => {
-      image.addEventListener('error', () => image.closest('.photo-link').classList.add('is-unavailable'), { once: true });
-    });
-  </script>
 </body>
 </html>
