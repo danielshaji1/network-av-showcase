@@ -16,9 +16,9 @@ A field portfolio of network and audiovisual installation work, from active inst
 |:--|:--|
 | ![Wireless audio receiver and network switch](images/previews/IMG_1760.jpg) | ![24-port Gigabit Ethernet switch](images/previews/IMG_1763.jpg) |
 
-## Open the portfolio site
+## Visit the portfolio
 
-The responsive gallery lives in [`index.html`](index.html). To publish it with GitHub Pages, open **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
+[Open the live portfolio site](https://danielshaji1.github.io/network-av-showcase/). The responsive gallery is built from [`index.html`](index.html).
 
 The displayed previews are optimized JPEGs. Full-resolution HEIC originals are in `images/` and linked from the site.
 
