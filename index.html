@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101819">
+  <meta name="description" content="A photo portfolio of network and audiovisual installations by Daniel Shaji.">
+  <title>Daniel Shaji — Network & AV Installations</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101819; --panel:#172223; --line:#344344; --muted:#aab8b7; --text:#f1f5f2; --accent:#c9f36b; }
+    * { box-sizing:border-box }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif }
+    a { color:inherit }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto }
+    header { border-bottom:1px solid var(--line); padding:22px 0 }
+    .brand { font-size:.9rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase }
+    .brand span { color:var(--accent) }
+    .hero { padding:88px 0 64px; display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:end }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.75rem; font-weight:700 }
+    h1 { font-size:clamp(2.8rem,7vw,5.8rem); line-height:.98; letter-spacing:-.06em; margin:18px 0 22px; max-width:760px }
+    .hero p { color:var(--muted); max-width:540px; font-size:1.1rem }
+    .hero-note { border-left:2px solid var(--accent); padding:4px 0 4px 20px; color:var(--muted); max-width:310px; justify-self:end }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:24px }
+    h2 { margin:0; font-size:1.5rem; letter-spacing:-.025em }
+    .count { color:var(--muted); font-size:.9rem }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; padding-bottom:84px }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden }
+    .card img { display:block; width:100%; height:390px; object-fit:cover; background:#202b2c }
+    .caption { padding:18px 20px 20px }
+    .tag { color:var(--accent); font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700 }
+    h3 { margin:7px 0 5px; font-size:1.13rem }
+    .caption p { color:var(--muted); margin:0; font-size:.93rem }
+    .empty { min-height:390px; display:grid; place-items:center; padding:35px; text-align:center; color:var(--muted); background:linear-gradient(145deg,#172223,#111a1b) }
+    .empty strong { display:block; color:var(--text); margin-bottom:8px }
+    footer { border-top:1px solid var(--line); padding:24px 0 36px; color:var(--muted); font-size:.88rem }
+    @media (max-width:720px) { .hero { grid-template-columns:1fr; padding:60px 0 45px; gap:20px } .hero-note { justify-self:start } .grid { grid-template-columns:1fr } .card img { height:auto; max-height:480px } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap brand">DS <span> / </span> Field work</div></header>
+  <main class="wrap">
+    <section class="hero">
+      <div><div class="eyebrow">Network · AV · Installation</div><h1>Built to connect.<br>Made to work.</h1><p>A photo journal of the network and audiovisual systems I install, support, and bring to life.</p></div>
+      <div class="hero-note">From structured cabling and equipment racks to live audio systems—real work, documented in the field.</div>
+    </section>
+    <section aria-labelledby="work-title">
+      <div class="section-head"><h2 id="work-title">Selected installations</h2><span class="count">01 project</span></div>
+      <div class="grid">
+        <article class="card"><img src="images/av-rack-install.jpg" alt="Installed rack with wireless microphone, in-ear monitor, audio distribution, and network equipment"><div class="caption"><div class="tag">Audio · Rack integration</div><h3>Wireless & monitoring rack</h3><p>Integrated wireless microphones, in-ear monitoring, audio distribution, and networked control in a touring-ready rack.</p></div></article>
+        <article class="card"><div class="empty"><div><strong>More installs coming soon</strong>Add project photos to <code>images/</code>, then duplicate a project card in <code>index.html</code>.</div></div><div class="caption"><div class="tag">Network · In progress</div><h3>Next project</h3><p>Document the system, the work, and the finished result here.</p></div></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 Daniel Shaji · Network & AV installations</div></footer>
+</body>
+</html>
