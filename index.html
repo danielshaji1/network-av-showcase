@@ -3,54 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101819">
-  <meta name="description" content="A photo portfolio of network and audiovisual installations by Daniel Shaji.">
-  <title>Daniel Shaji — Network & AV Installations</title>
+  <meta name="theme-color" content="#f4f2eb">
+  <meta name="description" content="A field portfolio of network and audiovisual installations by Daniel Shaji.">
+  <title>Daniel Shaji — Network & AV Fieldwork</title>
   <style>
-    :root { color-scheme: dark; --bg:#101819; --panel:#172223; --line:#344344; --muted:#aab8b7; --text:#f1f5f2; --accent:#c9f36b; }
-    * { box-sizing:border-box }
-    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif }
-    a { color:inherit }
-    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto }
-    header { border-bottom:1px solid var(--line); padding:22px 0 }
-    .brand { font-size:.9rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase }
-    .brand span { color:var(--accent) }
-    .hero { padding:88px 0 64px; display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:end }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.75rem; font-weight:700 }
-    h1 { font-size:clamp(2.8rem,7vw,5.8rem); line-height:.98; letter-spacing:-.06em; margin:18px 0 22px; max-width:760px }
-    .hero p { color:var(--muted); max-width:540px; font-size:1.1rem }
-    .hero-note { border-left:2px solid var(--accent); padding:4px 0 4px 20px; color:var(--muted); max-width:310px; justify-self:end }
-    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:24px }
-    h2 { margin:0; font-size:1.5rem; letter-spacing:-.025em }
-    .count { color:var(--muted); font-size:.9rem }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; padding-bottom:84px }
-    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden }
-    .card img { display:block; width:100%; height:390px; object-fit:cover; background:#202b2c }
-    .caption { padding:18px 20px 20px }
-    .tag { color:var(--accent); font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700 }
-    h3 { margin:7px 0 5px; font-size:1.13rem }
-    .caption p { color:var(--muted); margin:0; font-size:.93rem }
-    .empty { min-height:390px; display:grid; place-items:center; padding:35px; text-align:center; color:var(--muted); background:linear-gradient(145deg,#172223,#111a1b) }
-    .empty strong { display:block; color:var(--text); margin-bottom:8px }
-    footer { border-top:1px solid var(--line); padding:24px 0 36px; color:var(--muted); font-size:.88rem }
-    @media (max-width:720px) { .hero { grid-template-columns:1fr; padding:60px 0 45px; gap:20px } .hero-note { justify-self:start } .grid { grid-template-columns:1fr } .card img { height:auto; max-height:480px } }
+    :root {
+      color-scheme: light;
+      --paper: #f4f2eb;
+      --ink: #18231e;
+      --muted: #65716a;
+      --rule: #d9ddd3;
+      --forest: #20392f;
+      --lime: #d9ed87;
+      --white: #fffefa;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 var(--sans) }
+    a { color: inherit }
+    .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto }
+    .topbar { border-bottom: 1px solid var(--rule) }
+    .topbar-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px }
+    .wordmark { display: inline-flex; gap: 12px; align-items: center; text-decoration: none; font-size: .79rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase }
+    .monogram { width: 34px; height: 34px; display: grid; place-items: center; background: var(--forest); color: var(--lime); border-radius: 50%; font-size: .68rem; letter-spacing: .03em }
+    .top-link { color: var(--muted); font-size: .85rem; text-decoration: none }
+    .top-link:hover, .text-link:hover { color: var(--forest) }
+    .hero { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(32px, 7vw, 92px); align-items: center; padding-block: clamp(62px, 9vw, 112px) 88px }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: #526c45; font-size: .72rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase }
+    .eyebrow::before { content: ""; width: 25px; height: 1px; background: currentColor }
+    h1 { max-width: 720px; margin: 21px 0 23px; font: 400 clamp(3.2rem, 7.6vw, 6.7rem)/.94 var(--serif); letter-spacing: -.065em }
+    h1 span { color: #697b52; font-style: italic }
+    .intro { max-width: 515px; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.12rem) }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 30px }
+    .button { display: inline-flex; align-items: center; gap: 11px; padding: 13px 18px; border-radius: 999px; background: var(--forest); color: var(--white); font-size: .84rem; font-weight: 650; text-decoration: none; transition: transform .2s, background .2s }
+    .button:hover { transform: translateY(-2px); background: #2f5143 }
+    .button .arrow { color: var(--lime); font-size: 1.1rem }
+    .text-link { color: var(--muted); font-size: .84rem; text-underline-offset: 4px }
+    .hero-photo { position: relative; padding: 0 0 36px 36px }
+    .hero-photo::before { content: ""; position: absolute; inset: 34px 0 0 0; background: var(--lime); border-radius: 3px }
+    .hero-photo img { position: relative; display: block; width: 100%; height: clamp(300px, 42vw, 490px); object-fit: cover; object-position: center 36%; border-radius: 3px; filter: saturate(.84) }
+    .photo-note { position: absolute; right: -13px; bottom: 0; padding: 13px 17px; background: var(--white); box-shadow: 0 8px 28px #18231e14; font-size: .72rem; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase }
+    .photo-note strong { display: block; color: var(--forest); font-size: .82rem; letter-spacing: 0; text-transform: none }
+    .section-rule { border-top: 1px solid var(--rule) }
+    .gallery-section { padding: 70px 0 88px }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 28px }
+    .section-kicker { margin: 0 0 8px; color: #758365; font-size: .7rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase }
+    h2 { margin: 0; font: 400 clamp(2.1rem, 4.5vw, 3.6rem)/1.04 var(--serif); letter-spacing: -.045em }
+    .section-copy { max-width: 360px; margin: 0; color: var(--muted); font-size: .9rem }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px }
+    .photo-card { min-width: 0; background: var(--white); border: 1px solid #e6e7df; border-radius: 4px; overflow: hidden; transition: box-shadow .2s, transform .2s }
+    .photo-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px #18231e12 }
+    .photo-link { position: relative; display: block; background: #dfe4db; overflow: hidden; aspect-ratio: 4 / 3 }
+    .photo-link img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s; color: transparent }
+    .photo-card:hover .photo-link img { transform: scale(1.035) }
+    .photo-index { position: absolute; top: 12px; left: 12px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #18231ecf; color: white; font: .78rem var(--serif) }
+    .photo-caption { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 15px 16px 16px }
+    .photo-caption span:first-child { font-size: .84rem; font-weight: 630 }
+    .photo-kind { color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase }
+    .photo-fallback { display: none; position: absolute; inset: 0; place-content: center; padding: 24px; text-align: center; background: linear-gradient(145deg, #dfe4db, #ccd7c7); color: var(--forest); font-size: .84rem }
+    .photo-fallback strong { display: block; margin-bottom: 5px; font: 1.4rem var(--serif) }
+    .photo-link.is-unavailable img { display: none }
+    .photo-link.is-unavailable .photo-fallback { display: grid }
+    .about { display: grid; grid-template-columns: .75fr 1.25fr; gap: 45px; padding: 42px 0 74px; border-top: 1px solid var(--rule) }
+    .about-label { color: #758365; font-size: .7rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase }
+    .about p { max-width: 690px; margin: 0; color: #47544c; font: 1.25rem/1.5 var(--serif) }
+    footer { background: var(--forest); color: #e8ede5; padding: 23px 0 }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; color: #d0dbd1; font-size: .77rem }
+    .footer-inner a { color: var(--lime); text-decoration: none }
+    @media (max-width: 850px) { .hero { grid-template-columns: 1fr .9fr; gap: 34px } .photo-grid { grid-template-columns: repeat(2,minmax(0,1fr)) } }
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 32px, 520px) }
+      .topbar-inner { min-height: 66px }
+      .hero { grid-template-columns: 1fr; padding-block: 54px 62px }
+      h1 { font-size: clamp(3.35rem, 15vw, 5.3rem) }
+      .hero-photo { margin: 9px 8px 0 0; padding-left: 20px }
+      .hero-photo img { height: min(105vw, 430px) }
+      .photo-note { right: -8px }
+      .gallery-section { padding: 55px 0 62px }
+      .section-heading { display: block }
+      .section-copy { margin-top: 12px }
+      .photo-grid { grid-template-columns: 1fr; gap: 14px }
+      .photo-link { aspect-ratio: 4 / 3 }
+      .about { grid-template-columns: 1fr; gap: 12px; padding: 30px 0 52px }
+      .about p { font-size: 1.14rem }
+      .footer-inner { flex-direction: column; gap: 6px }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } *, *::before, *::after { transition-duration: .01ms !important } }
   </style>
 </head>
 <body>
-  <header><div class="wrap brand">DS <span> / </span> Field work</div></header>
-  <main class="wrap">
-    <section class="hero">
-      <div><div class="eyebrow">Network · AV · Installation</div><h1>Built to connect.<br>Made to work.</h1><p>A photo journal of the network and audiovisual systems I install, support, and bring to life.</p></div>
-      <div class="hero-note">From structured cabling and equipment racks to live audio systems—real work, documented in the field.</div>
-    </section>
-    <section aria-labelledby="work-title">
-      <div class="section-head"><h2 id="work-title">Selected installations</h2><span class="count">01 project</span></div>
-      <div class="grid">
-        <article class="card"><img src="images/av-rack-install.jpg" alt="Installed rack with wireless microphone, in-ear monitor, audio distribution, and network equipment"><div class="caption"><div class="tag">Audio · Rack integration</div><h3>Wireless & monitoring rack</h3><p>Integrated wireless microphones, in-ear monitoring, audio distribution, and networked control in a touring-ready rack.</p></div></article>
-        <article class="card"><div class="empty"><div><strong>More installs coming soon</strong>Add project photos to <code>images/</code>, then duplicate a project card in <code>index.html</code>.</div></div><div class="caption"><div class="tag">Network · In progress</div><h3>Next project</h3><p>Document the system, the work, and the finished result here.</p></div></article>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="wordmark" href="#top" aria-label="Daniel Shaji, home"><span class="monogram">DS</span><span>Fieldwork portfolio</span></a>
+      <a class="top-link" href="#installations">Selected installations&nbsp; ↓</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="shell hero" aria-labelledby="page-title">
+      <div>
+        <div class="eyebrow">Network · AV · Installation</div>
+        <h1 id="page-title">Systems that<br><span>work together.</span></h1>
+        <p class="intro">A field portfolio of network and audiovisual installations—capturing the details, the progress, and the finished work.</p>
+        <div class="hero-actions">
+          <a class="button" href="#installations">Explore the work <span class="arrow" aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#about">About this portfolio</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="images/av-rack-install.jpg" alt="Integrated audiovisual rack with wireless microphone and in-ear monitoring equipment" fetchpriority="high">
+        <div class="photo-note"><strong>In the field</strong>Network &amp; AV systems</div>
       </div>
     </section>
+
+    <section class="section-rule" id="installations" aria-labelledby="installations-title">
+      <div class="shell gallery-section">
+        <div class="section-heading">
+          <div><p class="section-kicker">Selected work · 2026</p><h2 id="installations-title">Installations</h2></div>
+          <p class="section-copy">A growing collection of completed work and active installs. Select a photo to open the original image.</p>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1365.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1365.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">01</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1366.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1366.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">02</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1756.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1756.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">03</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1757.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1757.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">04</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1760.heic" target="_blank" rel="noreferrer"><img src="images/IMG_1760.heic" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">05</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+          <article class="photo-card"><a class="photo-link" href="images/IMG_1763.HEIC" target="_blank" rel="noreferrer"><img src="images/IMG_1763.HEIC" alt="Field photo documenting a network or audiovisual installation" loading="lazy" decoding="async"><span class="photo-fallback"><span><strong>Open original photo</strong>HEIC image · select to view or download</span></span><span class="photo-index">06</span></a><div class="photo-caption"><span>Installation detail</span><span class="photo-kind">Field photo</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell about" id="about" aria-labelledby="about-title">
+      <div class="about-label" id="about-title">About this portfolio</div>
+      <p>Documenting the craft behind dependable network and AV systems—from the work in progress to the final, working installation.</p>
+    </section>
   </main>
-  <footer><div class="wrap">© 2026 Daniel Shaji · Network & AV installations</div></footer>
+  <footer><div class="shell footer-inner"><span>© 2026 Daniel Shaji · Network &amp; AV fieldwork</span><a href="#top">Back to top ↑</a></div></footer>
+  <script>
+    document.querySelectorAll('.photo-link img').forEach((image) => {
+      image.addEventListener('error', () => image.closest('.photo-link').classList.add('is-unavailable'), { once: true });
+    });
+  </script>
 </body>
 </html>
